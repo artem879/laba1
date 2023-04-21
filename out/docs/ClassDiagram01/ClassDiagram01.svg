@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="50px" preserveAspectRatio="none" style="width:272px;height:50px;background:#FFFFFF;" version="1.1" viewBox="0 0 272 50" width="272px" zoomAndPan="magnify"><defs/><g><g id="elem_первыйОбъект"><rect fill="#F1F1F1" height="37.6094" style="stroke:#181818;stroke-width:0.5;" width="112" x="7" y="7"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="98" x="14" y="23.5332">первыйОбъект</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="118" y1="28.6094" y2="28.6094"/></g><g id="elem_o2"><rect fill="#F1F1F1" height="37.6094" style="stroke:#181818;stroke-width:0.5;" width="112" x="154" y="7"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="98" x="161" y="23.5332">Второй объект</text><line style="stroke:#181818;stroke-width:0.5;" x1="155" x2="265" y1="28.6094" y2="28.6094"/></g><!--MD5=[bf66cda9a2ec48fff4ef01fc149d77bd]
+@startuml
+object первыйОбъект
+object "Второй объект" as o2
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 20:01:30 MSK 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1251
+Language: ru
+Country: RU
+--></g></svg>
