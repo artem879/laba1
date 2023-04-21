@@ -1,0 +1,4 @@
+@startuml
+object первыйОбъект
+object "Второй объект" as o2
+@enduml
