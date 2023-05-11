@@ -1,79 +1,28 @@
-import numpy
+mimport numpy
 import numpy as np
-try:
-    file1 = open("лаба3/data/app.conf", "r")
-    try:
-        spisok = file1.readlines()
-        celchisl = []
-        arr1 = []
-        print(spisok)
-        for i in spisok:
-            for j in i:
-                if j == " ":
-                    continue
-                else:
-                    celchisl.append(j)
 
-        celchisl = list(map(int, celchisl))
-        arr = numpy.array(celchisl)
-        element = arr[0]
-        arr = np.delete(arr, 0)
-        arr1.append(element)
-        print(arr1)
-        print(arr)
-        
-        
+newfile = open("app.conf", "w")
+newfile.write(input("Введите числа a b c через пробел"))
+newfile.close()
+newfile = open("app.conf", "r")
 
-        newres = []
-        i = 0
-        while i < element:
-            i = i + 1
-            newres.append(arr[0]*i + arr[1])
-        print(newres)
-    finally:
-        file1.close()
+spisok = newfile.readlines()
+celchisl = []
+for i in spisok:
+    for j in i:
+        if j == " ":
+            continue
+        else:
+            celchisl.append(j)
 
-    with open("лаба3/data/result.dat", "w") as file23:
-        file23.write(str(newres))
-        file23.close()
+celchisl = list(map(int, celchisl))
+ans = [celchisl[1] * i + celchisl[2] for i in range(0, celchisl[0])]
+print(ans)
 
-except FileNotFoundError:
-    print("Невозможно открыть файл")
-    newfile = open("лаба3/data/app.conf", "w")
-    newfile.write(input("Введите числа a b c через пробел"))
-    newfile.close()
-    newfile = open("лаба3/data/app.conf", "r")
-    spisok = newfile.readlines()
-    celchisl = []
-    arr1 = []
-    print(spisok)
-    for i in spisok:
-        for j in i:
-            if j == " ":
-                continue
-            else:
-                celchisl.append(j)
-
-        celchisl = list(map(int, celchisl))
-        arr = numpy.array(celchisl)
-        element = arr[0]
-        arr = np.delete(arr, 0)
-        arr1.append(element)
-        print(arr1)
-        print(arr)
-
-        newres = []
-        i = 0
-        while i < element:
-            newres.append(arr[0]*i + arr[1])
-            i = i + 1
-    newfile.close()
-    with open("лаба3/data/result.dat","w+") as file24:
-        file24.write(str(newres))
-        file24.close()
-        
+with open("result.dat", "w") as file23:
+    file23.write(str(ans))
+    file23.close()
     
-except:
-    print("Ошибка при работе с файлом")
+
 
 #Готовая лабораторная
